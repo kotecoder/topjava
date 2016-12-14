@@ -19,7 +19,7 @@ public class MealServlet extends HttpServlet {
     private static final Logger LOG = getLogger(UserServlet.class);
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        LOG.debug("redirect to meals");
+        LOG.debug("get all meals");
         request.setAttribute("meals", MealsUtil.getFilteredWithExceeded(MealsUtil.meals, LocalTime.MIN,LocalTime.MAX,MealsUtil.DEFAULT_CALORIES_PER_DAY));
 
         request.getRequestDispatcher("/meals.jsp").forward(request, response);
