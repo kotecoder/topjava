@@ -20,6 +20,8 @@
         <th>Date</th>
         <th>Description</th>
         <th>Calories</th>
+        <th></th>
+        <th><a href="meals?action=create">NEW</a></th>
 
     </tr>
     </thead>
@@ -33,7 +35,12 @@
             </td>
             <td>${meal.description}</td>
             <td>${meal.calories}</td>
+
+            <td><a href="meals?action=update&id=${meal.id}">Update</a></td>
+            <td><a href="meals?action=delete&id=${meal.id}">Delete</a></td>
+
          </tr>
+
     </c:forEach>
 </table>
 </body>
