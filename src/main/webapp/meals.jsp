@@ -16,11 +16,50 @@
     </style>
 </head>
 <body>
+
+<div >
+    <form:form method="post"  role="form" id="filter">
+    <div >
+        <label  for="startDate">From Date:</label>
+
+        <div >
+            <input type="date" name="startDate" id="startDate">
+        </div>
+
+        <label for="endDate">To Date:</label>
+
+        <div >
+            <input type="date" name="endDate" id="endDate">
+        </div>
+    </div>
+    <div >
+        <label for="startTime">From Time:</label>
+
+        <div >
+            <input type="time" name="startTime" id="startTime">
+        </div>
+
+        <label  for="endTime">To Time:</label>
+
+        <div >
+            <input type="time" name="endTime" id="endTime">
+        </div>
+    </div>
+    <div>
+        <div >
+            <button type="submit" >Filter</button>
+        </div>
+    </div>
+    </form:form>
+</div>
+
 <section>
     <h2><a href="index.html">Home</a></h2>
     <h2>Meal list</h2>
     <a href="meals?action=create">Add Meal</a>
     <hr>
+
+
     <table border="1" cellpadding="8" cellspacing="0">
         <thead>
         <tr>
@@ -32,7 +71,7 @@
         </tr>
         </thead>
         <c:forEach items="${meals}" var="meal">
-            <jsp:useBean id="meal" scope="page" type="ru.javawebinar.topjava.model.MealWithExceed"/>
+            <jsp:useBean id="meal" scope="page" type="ru.javawebinar.topjava.to.MealWithExceed"/>
             <tr class="${meal.exceed ? 'exceeded' : 'normal'}">
                 <td>
                         <%--${meal.dateTime.toLocalDate()} ${meal.dateTime.toLocalTime()}--%>
