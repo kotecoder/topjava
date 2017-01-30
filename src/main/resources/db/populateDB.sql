@@ -15,7 +15,7 @@ INSERT INTO user_roles (role, user_id) VALUES
 
 
 INSERT INTO meals (calories, description,datetime, user_id) VALUES
-  (100,'omlet','2017-01-02 20:13', 100000),
-  (400,'chicken',current_timestamp, 100000),
-  (200,'potato',current_timestamp, 100000);
+  (300,'omlet','2017-01-02 8:13', 100000),
+  (400,'chicken','2017-01-02 20:13', 100000),
+  (300,'potato','2017-01-02 14:13', 100000);
 
