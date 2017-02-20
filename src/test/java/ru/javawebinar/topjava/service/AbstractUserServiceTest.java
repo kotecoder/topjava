@@ -13,6 +13,7 @@ import javax.validation.ConstraintViolationException;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Objects;
 
 import static ru.javawebinar.topjava.UserTestData.*;
 
@@ -21,13 +22,15 @@ public abstract class AbstractUserServiceTest extends AbstractServiceTest {
     @Autowired
     protected UserService service;
 
-    @Autowired
+    @Autowired(required = false)
     protected JpaUtil jpaUtil;
 
     @Before
     public void setUp() throws Exception {
         service.evictCache();
-        jpaUtil.clear2ndLevelHibernateCache();
+        if (Objects.nonNull(jpaUtil)) {
+            jpaUtil.clear2ndLevelHibernateCache();
+        }
     }
 
     @Test
