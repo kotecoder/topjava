@@ -4,6 +4,8 @@
 <%@ taglib prefix="fn" uri="http://topjava.javawebinar.ru/functions" %>
 <html>
 <jsp:include page="fragments/headTag.jsp"/>
+<script type="text/javascript" src="resources/js/datatablesUtil.js" defer></script>
+<script type="text/javascript" src="resources/js/mealsDatatables.js" defer></script>
 <body>
 <jsp:include page="fragments/bodyHeader.jsp"/>
 
@@ -29,10 +31,12 @@
         </dl>
         <button type="submit"><spring:message code="meals.filter"/></button>
     </form>
+
     <hr>
     <a href="meals/create"><spring:message code="meals.add"/></a>
     <hr>
-    <table border="1" cellpadding="8" cellspacing="0">
+    <table cellpadding="8" cellspacing="0" class="table table-striped display" id="datatable">
+
         <thead>
         <tr>
             <th><spring:message code="meals.dateTime"/></th>
