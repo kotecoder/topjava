@@ -94,14 +94,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="calories" class="control-label col-xs-3"><spring:message code="meals.calories"/></label>
-
-                    <div class="col-xs-9">
-                        <input type="text" class="form-control" id="calories" name="calories" placeholder="<spring:message code="meals.calories"/>">
-                    </div>
-                </div>
-
-                <div class="form-group">
                     <label for="description" class="control-label col-xs-3"><spring:message code="meals.description"/></label>
 
                     <div class="col-xs-9">
@@ -110,8 +102,18 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="calories" class="control-label col-xs-3"><spring:message code="meals.calories"/></label>
+
+                    <div class="col-xs-9">
+                        <input type="number" class="form-control" id="calories" name="calories" placeholder="<spring:message code="meals.calories"/>">
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
                     <div class="col-xs-offset-3 col-xs-9">
-                        <button type="submit" class="btn btn-primary">
+                        <button  class="btn btn-primary" onclick="save()">
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                         </button>
                     </div>
