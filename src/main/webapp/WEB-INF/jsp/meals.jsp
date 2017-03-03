@@ -113,7 +113,7 @@
 
                 <div class="form-group">
                     <div class="col-xs-offset-3 col-xs-9">
-                        <button  class="btn btn-primary" onclick="save()">
+                        <button  class="btn btn-primary" type="button" onclick="save()">
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                         </button>
                     </div>
