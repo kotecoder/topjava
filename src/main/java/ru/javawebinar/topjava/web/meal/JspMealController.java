@@ -1,3 +1,4 @@
+/*
 package ru.javawebinar.topjava.web.meal;
 
 import org.springframework.stereotype.Controller;
@@ -16,11 +17,13 @@ import java.util.Objects;
 
 import static ru.javawebinar.topjava.util.DateTimeUtil.parseLocalDate;
 import static ru.javawebinar.topjava.util.DateTimeUtil.parseLocalTime;
+*/
 
 /**
  * gkislin
  * 16.10.2016
  */
+/*
 @Controller
 @RequestMapping(value = "/meals")
 public class JspMealController extends AbstractMealController {
@@ -74,3 +77,4 @@ public class JspMealController extends AbstractMealController {
         return Integer.valueOf(paramId);
     }
 }
+*/
