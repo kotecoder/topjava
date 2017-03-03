@@ -62,8 +62,12 @@
                 </td>
                 <td>${meal.description}</td>
                 <td>${meal.calories}</td>
-                <td><a href="meals/update?id=${meal.id}"><spring:message code="common.update"/></a></td>
-                <td><a href="meals/delete?id=${meal.id}"><spring:message code="common.delete"/></a></td>
+                <td><a class="btn btn-xs btn-primary">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                </a></td>
+                <td><a class="btn btn-xs btn-danger" type="button" onclick="deleteRow(${meal.id})">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </a></td>
             </tr>
         </c:forEach>
     </table>
