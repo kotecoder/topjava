@@ -14,7 +14,6 @@ import ru.javawebinar.topjava.model.User;
 import ru.javawebinar.topjava.repository.UserRepository;
 import ru.javawebinar.topjava.to.UserTo;
 import ru.javawebinar.topjava.util.UserUtil;
-import ru.javawebinar.topjava.util.ValidationUtil;
 import ru.javawebinar.topjava.util.exception.NotFoundException;
 
 import java.util.List;
@@ -103,6 +102,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Override
     public User getWithMeals(int id) {
-        return ValidationUtil.checkNotFoundWithId(repository.getWithMeals(id), id);
+        return checkNotFoundWithId(repository.getWithMeals(id), id);
     }
 }
